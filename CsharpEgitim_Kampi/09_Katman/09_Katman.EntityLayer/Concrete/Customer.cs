@@ -15,5 +15,8 @@ namespace _09_Katman.EntityLayer.Concrete
         public string CustomerSurname { get; set; }
         public string CustomerCity { get; set; }
         public string CustomerDistrict { get; set; }
+        public bool CustomerStatus { get; set; }
+
+        public List<Order> orders { get; set; }
     }
 }

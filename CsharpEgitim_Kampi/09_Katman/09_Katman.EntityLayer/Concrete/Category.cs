@@ -12,7 +12,8 @@ namespace _09_Katman.EntityLayer.Concrete
         [Key]
         public int CategoryId { get; set; }
         public string CategoryName { get; set; }
-        //public string CategoryDescription { get; set; }
+       
         public bool CategoryStatus { get; set; }
+        public List<Product> products { get; set; }
     }
 }

@@ -11,6 +11,15 @@ namespace _09_Katman.EntityLayer.Concrete
     {
         [Key]
         public int OrderId { get; set; }
-        
+        public int ProductId { get; set; }
+        public int Quantity { get; set; }
+        public decimal UnityPrice { get; set; }
+        public decimal TotalPrice   { get; set; }
+        public DateTime OrderDate { get; set; }
+        public virtual Product Product { get; set; }
+
+        public int CustomerId { get; set; }
+        public virtual Customer Customer { get; set; }
+
     }
 }

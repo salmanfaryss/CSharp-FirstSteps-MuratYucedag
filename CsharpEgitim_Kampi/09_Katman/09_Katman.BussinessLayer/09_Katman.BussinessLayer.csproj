@@ -7,4 +7,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\09_Katman.DataAccesLayer\09_Katman.DataAccesLayer.csproj" />
+    <ProjectReference Include="..\09_Katman.EntityLayer\09_Katman.EntityLayer.csproj" />
+  </ItemGroup>
+
 </Project>

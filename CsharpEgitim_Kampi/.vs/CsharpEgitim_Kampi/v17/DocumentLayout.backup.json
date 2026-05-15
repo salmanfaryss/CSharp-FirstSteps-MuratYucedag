@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\salma\\MyProject\\CsharpProjects\\CsharpEgitim_Kampi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{08B7A5E4-75EC-4A34-B592-433339C34180}|03_MakingDecision\\03_MakingDecision.csproj|c:\\users\\salma\\myproject\\csharpprojects\\csharpegitim_kampi\\03_makingdecision\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08B7A5E4-75EC-4A34-B592-433339C34180}|03_MakingDecision\\03_MakingDecision.csproj|solutionrelative:03_makingdecision\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8512F98A-B808-4890-9B3F-0CDB3A17E58A}|MyFinancalCrmProject\\MyFinancalCrmProject.csproj|c:\\users\\salma\\myproject\\csharpprojects\\csharpegitim_kampi\\myfinancalcrmproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8512F98A-B808-4890-9B3F-0CDB3A17E58A}|MyFinancalCrmProject\\MyFinancalCrmProject.csproj|solutionrelative:myfinancalcrmproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8512F98A-B808-4890-9B3F-0CDB3A17E58A}|MyFinancalCrmProject\\MyFinancalCrmProject.csproj|c:\\users\\salma\\myproject\\csharpprojects\\csharpegitim_kampi\\myfinancalcrmproject\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8512F98A-B808-4890-9B3F-0CDB3A17E58A}|MyFinancalCrmProject\\MyFinancalCrmProject.csproj|solutionrelative:myfinancalcrmproject\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8512F98A-B808-4890-9B3F-0CDB3A17E58A}|MyFinancalCrmProject\\MyFinancalCrmProject.csproj|c:\\users\\salma\\myproject\\csharpprojects\\csharpegitim_kampi\\myfinancalcrmproject\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8512F98A-B808-4890-9B3F-0CDB3A17E58A}|MyFinancalCrmProject\\MyFinancalCrmProject.csproj|solutionrelative:myfinancalcrmproject\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +22,44 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FrmDashboard.cs",
+              "DocumentMoniker": "C:\\Users\\salma\\MyProject\\CsharpProjects\\CsharpEgitim_Kampi\\MyFinancalCrmProject\\FrmDashboard.cs",
+              "RelativeDocumentMoniker": "MyFinancalCrmProject\\FrmDashboard.cs",
+              "ToolTip": "C:\\Users\\salma\\MyProject\\CsharpProjects\\CsharpEgitim_Kampi\\MyFinancalCrmProject\\FrmDashboard.cs",
+              "RelativeToolTip": "MyFinancalCrmProject\\FrmDashboard.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAswDgAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T23:20:47.564Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FrmDashboard.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\salma\\MyProject\\CsharpProjects\\CsharpEgitim_Kampi\\MyFinancalCrmProject\\FrmDashboard.cs",
+              "RelativeDocumentMoniker": "MyFinancalCrmProject\\FrmDashboard.cs",
+              "ToolTip": "C:\\Users\\salma\\MyProject\\CsharpProjects\\CsharpEgitim_Kampi\\MyFinancalCrmProject\\FrmDashboard.cs [Design]",
+              "RelativeToolTip": "MyFinancalCrmProject\\FrmDashboard.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T23:19:25.638Z",
+              "EditorCaption": " [Design]"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\salma\\MyProject\\CsharpProjects\\CsharpEgitim_Kampi\\03_MakingDecision\\Program.cs",
-              "RelativeDocumentMoniker": "03_MakingDecision\\Program.cs",
-              "ToolTip": "C:\\Users\\salma\\MyProject\\CsharpProjects\\CsharpEgitim_Kampi\\03_MakingDecision\\Program.cs",
-              "RelativeToolTip": "03_MakingDecision\\Program.cs",
-              "ViewState": "AgIAAIsAAAAAAAAAAAAQwBkBAAAMAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\salma\\MyProject\\CsharpProjects\\CsharpEgitim_Kampi\\MyFinancalCrmProject\\Program.cs",
+              "RelativeDocumentMoniker": "MyFinancalCrmProject\\Program.cs",
+              "ToolTip": "C:\\Users\\salma\\MyProject\\CsharpProjects\\CsharpEgitim_Kampi\\MyFinancalCrmProject\\Program.cs",
+              "RelativeToolTip": "MyFinancalCrmProject\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-03T14:25:18.59Z",
+              "WhenOpened": "2026-05-14T22:34:14.983Z",
               "EditorCaption": ""
             }
           ]

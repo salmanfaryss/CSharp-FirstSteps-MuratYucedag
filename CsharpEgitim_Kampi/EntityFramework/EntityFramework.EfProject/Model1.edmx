@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="EfTravelDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityType Name="TblCustomer">
+          <Key>
+            <PropertyRef Name="CustomerId" />
+          </Key>
+          <Property Name="CustomerId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CustomerName" Type="nvarchar" MaxLength="50" />
+          <Property Name="CustomerSurname" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TblGuid">
+          <Key>
+            <PropertyRef Name="GuidId" />
+          </Key>
+          <Property Name="GuidId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GuidName" Type="nvarchar" MaxLength="50" />
+          <Property Name="GuidSurname" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TblLocation">
+          <Key>
+            <PropertyRef Name="LocationId" />
+          </Key>
+          <Property Name="LocationId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="LocationCity" Type="nvarchar" MaxLength="50" />
+          <Property Name="LocationCountry" Type="nvarchar" MaxLength="50" />
+          <Property Name="LocationCapacity" Type="tinyint" />
+          <Property Name="LocationPrice" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="DayNight" Type="nvarchar" MaxLength="50" />
+          <Property Name="GuidId" Type="int" />
+        </EntityType>
+        <Association Name="FK_TblLocation_TblGuid">
+          <End Role="TblGuid" Type="Self.TblGuid" Multiplicity="0..1" />
+          <End Role="TblLocation" Type="Self.TblLocation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TblGuid">
+              <PropertyRef Name="GuidId" />
+            </Principal>
+            <Dependent Role="TblLocation">
+              <PropertyRef Name="GuidId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="EfTravelDbModelStoreContainer">
+          <EntitySet Name="TblCustomer" EntityType="Self.TblCustomer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblGuid" EntityType="Self.TblGuid" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblLocation" EntityType="Self.TblLocation" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_TblLocation_TblGuid" Association="Self.FK_TblLocation_TblGuid">
+            <End Role="TblGuid" EntitySet="TblGuid" />
+            <End Role="TblLocation" EntitySet="TblLocation" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="EfTravelDbModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityType Name="TblCustomer">
+          <Key>
+            <PropertyRef Name="CustomerId" />
+          </Key>
+          <Property Name="CustomerId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CustomerName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CustomerSurname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TblGuid">
+          <Key>
+            <PropertyRef Name="GuidId" />
+          </Key>
+          <Property Name="GuidId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GuidName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="GuidSurname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="TblLocation" Relationship="Self.FK_TblLocation_TblGuid" FromRole="TblGuid" ToRole="TblLocation" />
+        </EntityType>
+        <EntityType Name="TblLocation">
+          <Key>
+            <PropertyRef Name="LocationId" />
+          </Key>
+          <Property Name="LocationId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LocationCity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LocationCountry" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LocationCapacity" Type="Byte" />
+          <Property Name="LocationPrice" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="DayNight" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="GuidId" Type="Int32" />
+          <NavigationProperty Name="TblGuid" Relationship="Self.FK_TblLocation_TblGuid" FromRole="TblLocation" ToRole="TblGuid" />
+        </EntityType>
+        <Association Name="FK_TblLocation_TblGuid">
+          <End Role="TblGuid" Type="Self.TblGuid" Multiplicity="0..1" />
+          <End Role="TblLocation" Type="Self.TblLocation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TblGuid">
+              <PropertyRef Name="GuidId" />
+            </Principal>
+            <Dependent Role="TblLocation">
+              <PropertyRef Name="GuidId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="EfTravelDbEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TblCustomer" EntityType="Self.TblCustomer" />
+          <EntitySet Name="TblGuid" EntityType="Self.TblGuid" />
+          <EntitySet Name="TblLocation" EntityType="Self.TblLocation" />
+          <AssociationSet Name="FK_TblLocation_TblGuid" Association="Self.FK_TblLocation_TblGuid">
+            <End Role="TblGuid" EntitySet="TblGuid" />
+            <End Role="TblLocation" EntitySet="TblLocation" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="EfTravelDbModelStoreContainer" CdmEntityContainer="EfTravelDbEntities1">
+          <EntitySetMapping Name="TblCustomer">
+            <EntityTypeMapping TypeName="EfTravelDbModel.TblCustomer">
+              <MappingFragment StoreEntitySet="TblCustomer">
+                <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+                <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+                <ScalarProperty Name="CustomerSurname" ColumnName="CustomerSurname" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblGuid">
+            <EntityTypeMapping TypeName="EfTravelDbModel.TblGuid">
+              <MappingFragment StoreEntitySet="TblGuid">
+                <ScalarProperty Name="GuidId" ColumnName="GuidId" />
+                <ScalarProperty Name="GuidName" ColumnName="GuidName" />
+                <ScalarProperty Name="GuidSurname" ColumnName="GuidSurname" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblLocation">
+            <EntityTypeMapping TypeName="EfTravelDbModel.TblLocation">
+              <MappingFragment StoreEntitySet="TblLocation">
+                <ScalarProperty Name="LocationId" ColumnName="LocationId" />
+                <ScalarProperty Name="LocationCity" ColumnName="LocationCity" />
+                <ScalarProperty Name="LocationCountry" ColumnName="LocationCountry" />
+                <ScalarProperty Name="LocationCapacity" ColumnName="LocationCapacity" />
+                <ScalarProperty Name="LocationPrice" ColumnName="LocationPrice" />
+                <ScalarProperty Name="DayNight" ColumnName="DayNight" />
+                <ScalarProperty Name="GuidId" ColumnName="GuidId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

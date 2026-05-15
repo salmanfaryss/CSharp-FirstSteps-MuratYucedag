@@ -5,4 +5,3 @@ C:\Users\salma\MyProject\CsharpProjects\CsharpEgitim_Kampi\02_Variables\obj\Debu
 C:\Users\salma\MyProject\CsharpProjects\CsharpEgitim_Kampi\02_Variables\obj\Debug\02_Variables.csproj.CoreCompileInputs.cache
 C:\Users\salma\MyProject\CsharpProjects\CsharpEgitim_Kampi\02_Variables\obj\Debug\02_Variables.exe
 C:\Users\salma\MyProject\CsharpProjects\CsharpEgitim_Kampi\02_Variables\obj\Debug\02_Variables.pdb
-C:\Users\salma\MyProject\CsharpProjects\CsharpEgitim_Kampi\02_Variables\obj\Debug\02_Variables.exe.config

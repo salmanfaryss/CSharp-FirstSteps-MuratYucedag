@@ -5,4 +5,3 @@ C:\Users\salma\MyProject\CsharpProjects\CsharpEgitim_Kampi\01_MainSubjects\obj\D
 C:\Users\salma\MyProject\CsharpProjects\CsharpEgitim_Kampi\01_MainSubjects\obj\Debug\01_MainSubjects.csproj.CoreCompileInputs.cache
 C:\Users\salma\MyProject\CsharpProjects\CsharpEgitim_Kampi\01_MainSubjects\obj\Debug\01_MainSubjects.exe
 C:\Users\salma\MyProject\CsharpProjects\CsharpEgitim_Kampi\01_MainSubjects\obj\Debug\01_MainSubjects.pdb
-C:\Users\salma\MyProject\CsharpProjects\CsharpEgitim_Kampi\01_MainSubjects\obj\Debug\01_MainSubjects.exe.config

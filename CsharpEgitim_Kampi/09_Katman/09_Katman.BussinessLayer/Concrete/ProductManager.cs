@@ -1,0 +1,46 @@
+﻿using _09_Katman.BussinessLayer.Abstract;
+using _09_Katman.DataAccesLayer.Abstract;
+using _09_Katman.EntityLayer.Concrete;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _09_Katman.BussinessLayer.Concrete
+{
+    public class ProductManager : IProductService
+    {
+        IProductDal _productDal;
+
+        public ProductManager(IProductDal productDal)
+        {
+            _productDal = productDal;
+        }
+
+        public List<Product> GetAll()
+        {
+            return _productDal.GetList();
+        }
+
+        public void TDelete(Product p)
+        {
+            _productDal.Delete(p);
+        }
+
+        public Product TGetById(int id)
+        {
+            return _productDal.GetById(id);
+        }
+
+        public void TInsert(Product p)
+        {
+            _productDal.Insert(p);
+        }
+
+        public void TUpdate(Product p)
+        {
+           _productDal.Update(p);
+        }
+    }
+}
